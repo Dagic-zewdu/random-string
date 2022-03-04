@@ -11,7 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/Dagic-zewdu/random-string.git"
   },
-  "keywords": [],
+  "keywords": [
+    "random",
+    "string",
+    "id",
+    "random string",
+    "random id",
+    "token",
+    "token generator"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,6 +27,7 @@
   },
   "homepage": "https://github.com/Dagic-zewdu/random-string#readme",
   "devDependencies": {
+    "jest": "^27.5.1",
     "typescript": "^4.6.2"
   }
 }
