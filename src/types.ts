@@ -3,7 +3,9 @@
  */
 export type options={
    charset?:"alpanumeric"|"number",
-   allowCapitals?:boolean,
+   disableCapitalLetters?:boolean, //disable capital letter
    char?:string,
-   length: number     
+   length: number,
+   disableSmallLetters?:boolean,
+   disableNumbers?:boolean    
 }
