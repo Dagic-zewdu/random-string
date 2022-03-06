@@ -24,4 +24,8 @@ describe('testing with given options',()=>{
         let random=randomString.generate({charset:'number',length:6})
         expect(random.match(/^[0-9]+$/)).toBeTruthy()
     })
+    test('should be an alphabet only',()=>{
+        let random=randomString.generate({charset:'alphabet',length:6})
+        expect(random.match(/^[a-zA-Z]+$/)).toBeTruthy()
+    })
 })

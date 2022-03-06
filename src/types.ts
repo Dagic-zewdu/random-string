@@ -2,10 +2,9 @@
  * 
  */
 export type options={
-   charset?:"alpanumeric"|"number",
+   charset?:"alphanumeric"|"number"|"alphabet"|"hex"|"binary"|"octal",
    disableCapitalLetters?:boolean, //disable capital letter
-   char?:string,
+   char?:string, // 13rea
    length: number,
-   disableSmallLetters?:boolean,
-   disableNumbers?:boolean    
+   disableSmallLetters?:boolean,    
 }

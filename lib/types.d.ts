@@ -2,10 +2,9 @@
  *
  */
 export declare type options = {
-    charset?: "alpanumeric" | "number";
+    charset?: "alphanumeric" | "number" | "alphabet" | "hex" | "binary" | "octal";
     disableCapitalLetters?: boolean;
     char?: string;
     length: number;
     disableSmallLetters?: boolean;
-    disableNumbers?: boolean;
 };
