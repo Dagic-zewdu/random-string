@@ -6,7 +6,8 @@
   "typings": "lib/index",
   "scripts": {
     "build": "tsc -p .",
-    "test": "jest"
+    "test": "jest",
+    "dev": "tsc -p . -w"
   },
   "repository": {
     "type": "git",
