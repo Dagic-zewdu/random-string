@@ -9,6 +9,11 @@ describe('testing using provide length', () => {
         let random=randomString.generate(9)
         expect(random.match(/^[a-zA-Z0-9]+$/)).toBeTruthy()
     })
+    test('length should be 16',()=>{
+        let random=randomString.generate()
+        console.log(random)
+        expect(random.length===16).toBeTruthy()
+        })
 });
 
 describe('testing with given options',()=>{
@@ -30,16 +35,27 @@ describe('testing with given options',()=>{
     })
     test('should be Binary only',()=>{
         let random=randomString.generate({charset:'binary',length:6})
-        console.log("Randome value is "+random);
         expect(random.match(/[0-1]+$/)).toBeTruthy()
     })
     test('should be octal only',()=>{
         let random=randomString.generate({charset:'octal',length:6})
-        console.log("Randome value is "+random);
         expect(random.match(/[0-7]+$/)).toBeTruthy()
     })
     test('should be hexa only',()=>{
         let random=randomString.generate({charset:'hex',length:6})
         expect(random.match(/[0-9a-fA-F]+$/)).toBeTruthy()
+    })
+    test('should be hexa with small Letters  only',()=>{
+        let random=randomString.generate({charset:'hex',length:6,disableCapitalLetters:true})
+        expect(random.match(/[0-9a-f]+$/)).toBeTruthy()
+    })
+    test('should be hexa with capital Letters  only',()=>{
+        let random=randomString.generate({charset:'hex',length:6,disableSmallLetters:true})
+        expect(random.match(/[0-9A-F]+$/)).toBeTruthy()
+    })
+    test('should be symbols with alphanumeric Letters  only',()=>{
+        let random=randomString.generate({length:20,insertSymbol:true})
+        console.log(random)
+        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-zA-Z]+$/)).toBeTruthy()
     })
 })

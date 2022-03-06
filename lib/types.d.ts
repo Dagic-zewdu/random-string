@@ -9,3 +9,7 @@ export declare type options = {
     disableSmallLetters?: boolean;
     insertSymbol?: boolean;
 };
+export declare const hex = "0123456789ABCDEFabcdef";
+export declare const symbols: string;
+export declare const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+export declare const alphanumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
