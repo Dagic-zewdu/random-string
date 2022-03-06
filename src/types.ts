@@ -6,5 +6,6 @@ export type options={
    disableCapitalLetters?:boolean, //disable capital letter
    char?:string, // 13rea
    length: number,
-   disableSmallLetters?:boolean,    
+   disableSmallLetters?:boolean, 
+   insertSymbol?:boolean,   
 }

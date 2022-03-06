@@ -28,4 +28,14 @@ describe('testing with given options',()=>{
         let random=randomString.generate({charset:'alphabet',length:6})
         expect(random.match(/^[a-zA-Z]+$/)).toBeTruthy()
     })
+    test('should be Binary only',()=>{
+        let random=randomString.generate({charset:'binary',length:6})
+        console.log("Randome value is "+random);
+        expect(random.match(/[0-1]+$/)).toBeTruthy()
+     
+    })
+    test('should be hexa only',()=>{
+        let random=randomString.generate({charset:'hex',length:6})
+        expect(random.match(/[0-9a-fA-F]+$/)).toBeTruthy()
+    })
 })

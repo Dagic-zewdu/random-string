@@ -7,4 +7,5 @@ export declare type options = {
     char?: string;
     length: number;
     disableSmallLetters?: boolean;
+    insertSymbol?: boolean;
 };

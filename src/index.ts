@@ -43,12 +43,34 @@ export const generate = (option:number|options) => {
           result += characters.charAt(Math.floor(Math.random() * charactersLength));
         } 
     }
-    else if(option.disableSmallLetters){
-        const characters =option.charset==='alphabet'?'ABCDEFGHIJKLMNOPQRSTUVWXYZ':'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    else if(option.charset==='binary')
+    {
+      for(let i = 0; i < option.length; ++i) {
+      result += Math.floor(Math.random() * 2);
+      }
+    }
+    else if(option.charset==='octal')
+    {
+      for(let i = 0; i < option.length; ++i) {
+      result+= Math.floor(Math.random() * 8);
+      }
+    } 
+    else if(option.charset==='hex')
+    {
+      const characters = '0123456789ABCDEFabcdef';
         const charactersLength = characters.length;
         for (let i = 0; i < option.length; i += 1) {
-          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+          result+=characters.charAt(Math.floor(Math.random() * charactersLength));
         }
+      
+    }
+    else if (option.charset==='alphabet')
+    {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      const charactersLength = characters.length;
+      for (let i = 0; i < option.length; i += 1) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
     }
     else {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -57,6 +79,8 @@ export const generate = (option:number|options) => {
           result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }   
     }        
-    }   
+    }
+      
+    
     return result;
 };
