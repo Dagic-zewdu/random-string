@@ -11,7 +11,6 @@ describe('testing using provide length', () => {
     })
     test('length should be 16',()=>{
         let random=randomString.generate()
-        console.log(random)
         expect(random.length===16).toBeTruthy()
         })
 });
@@ -54,8 +53,14 @@ describe('testing with given options',()=>{
         expect(random.match(/[0-9A-F]+$/)).toBeTruthy()
     })
     test('should be symbols with alphanumeric Letters  only',()=>{
-        let random=randomString.generate({length:20,insertSymbol:true})
+        let random=randomString.generate({length:8,insertSymbol:true})
         console.log(random)
         expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-zA-Z]+$/)).toBeTruthy()
     })
+    test('should be symbols with hexadicmal letters  only',()=>{
+        let random=randomString.generate({insertSymbol:true,charset:"hex"})
+        console.log(random)
+        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-fA-f]+$/)).toBeTruthy()
+    })
+   
 })
