@@ -62,5 +62,14 @@ describe('testing with given options',()=>{
         console.log(random)
         expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-fA-f]+$/)).toBeTruthy()
     })
-   
+    test('should be symbols with alphanumeric small letters  only',()=>{
+        let random=randomString.generate({insertSymbol:true,disableCapitalLetters:true})
+        console.log(random)
+        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-z]+$/)).toBeTruthy()
+    })
+    test('should be symbols with alphanumeric capital letters  only',()=>{
+        let random=randomString.generate({insertSymbol:true,disableCapitalLetters:true})
+        console.log(random)
+        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/]|[0-9a-z]+$/)).toBeTruthy()
+    })
 })
