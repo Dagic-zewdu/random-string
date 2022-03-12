@@ -149,13 +149,15 @@ Install node modules
 To Test this program you can Run the test.js <font color="blue"> npm run test </font> which Containes different test like 
 <b><font color="blue>"Example :</font><b>
 
-<font color="blue">
+ 
+ 
+<code>
  test('should be symbols with alphanumeric capital letters  only',()=>{
         let random=randomString.generate({insertSymbol:true,disableCapitalLetters:true})
         console.log(random)
-        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/]|[0-9a-z]+$/)).toBeTruthy()
-    })
-</font>
+ expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/]|[0-9a-z]+$/)).toBeTruthy()
+ }) 
+ </code>
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
