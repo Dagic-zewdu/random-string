@@ -25,7 +25,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
  -->
-### Random String Generator
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
