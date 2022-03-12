@@ -183,8 +183,8 @@ See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a
 
 👤 **Dagmawi Zewdu**
 
- - GitHub: [@sentayhu19](https://github.com/Dagic-zewdu)
-- LinkedIn: [sentayhu-berhanu](https://www.linkedin.com/in/dagi-zewdu-21b835215)
+ - GitHub: [@Dagic-zewdu](https://github.com/Dagic-zewdu)
+- LinkedIn: [Dagi-Zewdu](https://www.linkedin.com/in/dagi-zewdu-21b835215)
 
 ### Author 2
 
