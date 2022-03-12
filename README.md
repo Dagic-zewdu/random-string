@@ -17,21 +17,21 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
+ -->
+### Random String Generator
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+<!--   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
   <h3 align="center">Random-String-Generator</h3>
 
@@ -139,7 +139,7 @@ Install node modules
 <!-- 4. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API'; -->
-   ```
+  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -149,6 +149,7 @@ Install node modules
 
 To Test this program you can Run the test.js <font color="blue"> npm run test </font> which Containes different test like 
 <b><font color="blue>"Example :</font><b>
+
 <font color="blue">
  test('should be symbols with alphanumeric capital letters  only',()=>{
         let random=randomString.generate({insertSymbol:true,disableCapitalLetters:true})
@@ -163,6 +164,7 @@ To Test this program you can Run the test.js <font color="blue"> npm run test </
 
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 - [x] Generate Alhanumeric, numbers , Alphabet, Octal, Hex, Binary 
