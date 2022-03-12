@@ -179,14 +179,14 @@ See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a
 
 ## Authors
 
-# Author 1
+### Author 1
 
 👤 **Dagmawi Zewdu**
 
  - GitHub: [@sentayhu19](https://github.com/Dagic-zewdu)
 - LinkedIn: [sentayhu-berhanu](https://www.linkedin.com/in/dagi-zewdu-21b835215)
 
-# Author 2
+### Author 2
 
 👤 **Sentayhu Berhanu**
 
