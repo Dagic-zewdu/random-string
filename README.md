@@ -81,7 +81,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 There are lots of scenarios which one can use our Random string generator the most known or the best scenario is for password genertion and Token generation.
 There are many Random Genertor available on GitHub; however, We didn't find one that really suited our needs a a devloper.
