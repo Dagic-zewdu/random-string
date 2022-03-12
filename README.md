@@ -166,7 +166,7 @@ To Test this program you can Run the test.js <font color="blue"> npm run test </
 
 ## Roadmap
 
-- [x] Generate Alhanumeric, numbers , Alphabet, Octal, Hex, Binary 
+- [x] Generate alphanumeric, numbers , Alphabet, Octal, Hex, Binary 
 - [x] Generate Symbols
 - [ ] Generate with Advanced Symbols
 - [ ] Generate Numbers with Symbols
