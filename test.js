@@ -1,10 +1,6 @@
 const randomString =require('./lib/index')
 
 describe('testing using provide length', () => {
-    test('the string generated should have a length of 5', () => {
-       let len=randomString.generate({charset:'number',length:5})
-      expect(len.length).toBe(5)
-    });
     test('the string should return alphanumeric values',()=>{
         let random=randomString.generate(9)
         expect(random.match(/^[a-zA-Z0-9]+$/)).toBeTruthy()
@@ -54,22 +50,19 @@ describe('testing with given options',()=>{
     })
     test('should be symbols with alphanumeric Letters  only',()=>{
         let random=randomString.generate({length:8,insertSymbol:true})
-        console.log(random)
         expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-zA-Z]+$/)).toBeTruthy()
     })
-    test('should be symbols with hexadicmal letters  only',()=>{
-        let random=randomString.generate({insertSymbol:true,charset:"hex"})
+    test('should be symbols with number  only',()=>{
+        let random=randomString.generate({insertSymbol:true,charset:"number"})
         console.log(random)
-        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-fA-f]+$/)).toBeTruthy()
+        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/+0-9]+$/)).toBeTruthy()
     })
     test('should be symbols with alphanumeric small letters  only',()=>{
         let random=randomString.generate({insertSymbol:true,disableCapitalLetters:true})
-        console.log(random)
         expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-z]+$/)).toBeTruthy()
     })
     test('should be symbols with alphanumeric capital letters  only',()=>{
         let random=randomString.generate({insertSymbol:true,disableCapitalLetters:true})
-        console.log(random)
         expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/]|[0-9a-z]+$/)).toBeTruthy()
     })
 })

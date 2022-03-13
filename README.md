@@ -1,40 +1,14 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
- -->
-<!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<div>
 <!--   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-  <h3 align="center">Random-String-Generator</h3>
+  <h1>Random-String-Generator</h1>
 
-  <p align="center">
+  <p>
     This is Free-to-use Best Rndom String Generator 
     <br />
     <a href="https://github.com/Dagic-zewdu/random-string"><strong>Explore the docs »</strong></a>
@@ -98,14 +72,6 @@ Use the `index.ts` file to get started.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [TypeScript](https://www.typescriptlang.org/)
-* [JavaScript](https://www.javascript.com/)
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -120,8 +86,14 @@ To start to use this on local machine build then first Test the program using th
 Install node modules 
 * npm
   ```sh
-  npm install
+  npm install random-string
   ```
+* yarn 
+
+```
+yarn add random-string
+
+```
 
 ### Installation
 
@@ -208,6 +180,13 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+
+### Built With
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+* [TypeScript](https://www.typescriptlang.org/)
+* [JavaScript](https://www.javascript.com/)
 
 <!-- LICENSE
 ## License
