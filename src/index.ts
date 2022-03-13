@@ -25,9 +25,11 @@ export const generate = (option:number|options) => {
     for (let i = 0; i < option.length; i += 1) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
       }
+        result=checkOptions(result,option,option.char)
         }
     else if(option.charset==="number"){
        result= Math.round(Math.random()*Math.pow(10,option.length)).toString()
+      result=checkOptions(result,option)
     }
    
     else if(option.charset==='binary')
