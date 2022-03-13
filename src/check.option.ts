@@ -1,9 +1,11 @@
-import { hex,symbols, options, alphabet, alphanumeric } from "./types";
+import { hex,symbols, options, alphabet, alphanumeric, number } from "./types";
 
 export const checkOptions=(result:string,option:options)=>{
     let newResult=result
     if(option.insertSymbol){
-        const characters= option.charset==="hex"?(hex+symbols):option.charset==="alphabet"?(alphabet+symbols): (alphanumeric+symbols);
+        const characters= option.charset==="number"?(number+symbols):
+        option.charset==="alphabet"?(alphabet+symbols): 
+        (alphanumeric+symbols);
         const charactersLength = characters.length;
         for (let i = 0; i < option.length; i += 1) {
           newResult += characters.charAt(Math.floor(Math.random() * charactersLength));
