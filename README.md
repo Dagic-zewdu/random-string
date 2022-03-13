@@ -162,7 +162,7 @@ randomString
 
 * length: define the length of the output default 16   [Optional]
 
-* insertSymbol - to use Symbols when generatig random string output  [Optional]
+* insert Symbol: to use Symbols when generatig random string output  [Optional]
 
 * charset:
 
