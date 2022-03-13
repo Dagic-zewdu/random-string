@@ -81,8 +81,6 @@ Use the `index.ts` file to get started.
 
 To start to use this on local machine build then first Test the program using the test.js  
 
-### Prerequisites
-
 Install node modules 
 * npm
   ```sh
@@ -118,32 +116,85 @@ yarn add random-string
 
 ## Usage
 
-To Test this program you can Run the test.js <font color="blue"> npm run test </font> which Containes different test like 
-<b><font color="blue>"Example :</font><b>
+var randomeString = require("randomeString");
+randomeString.generate();
+  >> xabgtl3yb1Ac0MrQ
 
- 
- 
-<code>
- test('should be symbols with alphanumeric capital letters  only',()=>{
-        let random=randomString.generate({insertSymbol:true,disableCapitalLetters:true})
-        console.log(random)
- expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/]|[0-9a-z]+$/)).toBeTruthy()
- }) 
- </code>
+ randomeString.generate(6);
+ >> lAo3Bi
+
+ randomeString.generate({
+  char:'2846'
+ ,length:6});
+ >> 486828
+
+randomstring.generate({
+char:'abcdef',
+length:10})
+>>adcadffbcb
+
+randomString.enerate({
+charset:'number',
+length:6})
+>>816862
+
+randomString.enerate(
+  {charset:'hex',
+length:6,
+disableSmallLetters:true})
+>>ff6108
+
+randomString.generate(
+  {insertSymbol:true,
+  disableCapitalLetters:true})
+>>qnbnlog0nmivs4y5
+>>
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## API
+randomString
+
+- generate(option)
+
+* options:
+
+* length: define the length of the output default 16   [Optional]
+
+* insertSymbol - to use Symbols when generatig random string output  [Optional]
+
+* charset:
+
+  - Alphabetic [a-zA-Z]
+
+  - alphanumeric[0-9a-zAZ]
+
+  - numeric [0-9]
+
+  - Binary [01]
+
+  - Octal [0-7]
+
+  - Hexa [0-9a-fA-F]
+
+ * capitalization:
+
+    - disableSmallLetters : Only Capital Leters are used to generate the output [Optional]
+
+    - disableCapitalLetters : Only Small Leters are used to generate the output [Optional]
 
 
 <!-- ROADMAP -->
-
+## Tests
+- npm install 
+- npm run test
 ## Roadmap
-
 - [x] Generate alphanumeric, numbers , Alphabet, Octal, Hex, Binary 
 - [x] Generate Symbols
 - [ ] Generate with Advanced Symbols
 - [ ] Generate Numbers with Symbols
+
 
 See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a full list of proposed features (and known issues).
 
