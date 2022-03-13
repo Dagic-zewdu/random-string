@@ -3,10 +3,10 @@
  */
 export declare type options = {
     charset?: "alphanumeric" | "number" | "alphabet" | "hex" | "binary" | "octal";
-    disableCapitalLetters?: boolean;
-    char?: string;
+    lowerCaseOnly?: boolean;
+    range?: string;
     length: number;
-    disableSmallLetters?: boolean;
+    upperCaseOnly?: boolean;
     insertSymbol?: boolean;
 };
 export declare const hex = "0123456789ABCDEFabcdef";

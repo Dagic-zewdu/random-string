@@ -1,9 +1,9 @@
 import { hex,symbols, options, alphabet, alphanumeric, number } from "./types";
 
-export const checkOptions=(result:string,option:options,charset?:string)=>{
+export const checkOptions=(result:string,option:options)=>{
     let newResult=result
     if(option.insertSymbol){
-        const characters= charset?(symbols+charset+symbols):
+        const characters= option.range?(symbols+option.range+symbols):
         option.charset==="number"?(symbols+number+symbols):
         option.charset==="alphabet"?(symbols+alphabet+symbols): 
         (symbols+alphanumeric+symbols);
@@ -12,10 +12,10 @@ export const checkOptions=(result:string,option:options,charset?:string)=>{
           newResult += characters.charAt(Math.floor(Math.random() * charactersLength));
         }  
     }
-    if(option.disableCapitalLetters){
+    if(option.lowerCaseOnly){
        newResult=result.toLowerCase()
     }
-    else if(option.disableSmallLetters){
+    if(option.upperCaseOnly){
     newResult=result.toUpperCase()
     }
      return newResult

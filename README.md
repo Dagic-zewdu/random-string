@@ -93,18 +93,6 @@ yarn add random-string
 
 ```
 
-### Installation
-
-
-<!-- 1. Get a free API Key at [https://example.com](https://example.com) -->
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Dagic-zewdu/random-string.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
 <!-- 4. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API'; -->
@@ -116,26 +104,59 @@ yarn add random-string
 
 ## Usage
 
-var randomeString = require("randomeString");
-randomeString.generate();
-  >> xabgtl3yb1Ac0MrQ
+For generating a random string you call `generate()` function.By default it generate 16 character string.
+``` js
+const randomString = require("random-string");
+randomString.generate(); // xabgtl3yb1Ac0MrQ
 
- randomeString.generate(6);
- >> lAo3Bi
+```
+If you want some length to random string pass a number to the function.
 
- randomeString.generate({
-  char:'2846'
- ,length:6});
- >> 486828
+```js
+ randomString.generate(6); // lAo3Bi
+```
+
+To be more specific you can pass an object for more flexibility.This are the listed options you can provide
+
+``` ts
+type options={
+   charset?:"alphanumeric"|"number"|"alphabet"|"hex"|"binary"|"octal",
+   range?:string, //  string range provided by the user
+   length?: number, // length of the cahracter to genrated 
+   insertSymbol?:boolean, //insert symbol
+   upperCaseOnly?:boolean, //uppercase letters only 
+   lowerCaseOnly?:boolean, //lowerCase letters only   
+ }
+```
+passing down the options.Generate string only in the given string range
+
+```js
+randomeString.generate({
+  char:'abc123',
+  length:6
+ });
+
+// a3cb21
+```
+You can set also set type of string
+```js
+randomstring.generate({
+charset:'number',
+length:10
+}) //2342612198
 
 randomstring.generate({
-char:'abcdef',
-length:10})
->>adcadffbcb
-
-randomString.enerate({
-charset:'number',
-length:6})
+charset:'hex', 
+length:6
+})
+// C0faDB
+```
+You can also insert symbols if you pass set the `insertSymbol` option to true. But it doesn't work for binary or octal or hex charset option. 
+``` js
+randomString.generate({
+insertSymbol:true
+})
+```
 >>816862
 
 randomString.enerate(
@@ -200,6 +221,18 @@ See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Installation
+
+
+<!-- 1. Get a free API Key at [https://example.com](https://example.com) -->
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Dagic-zewdu/random-string.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
 ## Authors
 
 ### Author 1

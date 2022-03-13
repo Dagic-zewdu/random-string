@@ -3,10 +3,10 @@
  */
 export type options={
    charset?:"alphanumeric"|"number"|"alphabet"|"hex"|"binary"|"octal",
-   disableCapitalLetters?:boolean, //disable capital letter
-   char?:string, // 13rea
+   lowerCaseOnly?:boolean, //disable capital letter
+   range?:string, // 13rea
    length: number,
-   disableSmallLetters?:boolean, 
+   upperCaseOnly?:boolean, 
    insertSymbol?:boolean,   
 }
 
