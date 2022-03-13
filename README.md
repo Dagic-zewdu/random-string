@@ -158,27 +158,27 @@ randomString
 
 - generate(option)
 
-* options:
+ * options:
 
-* length: define the length of the output default 16   [Optional]
+  * length: define the length of the output default 16   [Optional]
 
-* insert Symbol: to use Symbols when generatig random string output  [Optional]
+  * insert Symbol: to use Symbols when generatig random string output  [Optional]
 
-* charset:
+  * charset:
 
-  - Alphabetic [a-zA-Z]
+    - Alphabetic [a-zA-Z]
 
-  - alphanumeric[0-9a-zAZ]
+    - alphanumeric[0-9a-zAZ]
 
-  - numeric [0-9]
+    - numeric [0-9]
 
-  - Binary [01]
+    - Binary [01]
 
-  - Octal [0-7]
+    - Octal [0-7]
 
-  - Hexa [0-9a-fA-F]
+    - Hexa [0-9a-fA-F]
 
- * capitalization:
+  * capitalization:
 
     - disableSmallLetters : Only Capital Leters are used to generate the output [Optional]
 
