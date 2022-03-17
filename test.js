@@ -45,11 +45,11 @@ describe('testing with given options',()=>{
     })
     test('should be alphabet with small Letters  only',()=>{
         let random=randomString.generate({charset:'alphabet',length:6,lowerCaseOnly:true})
-        expect(random.match(/[0-9a-f]+$/)).toBeTruthy()
+        expect(random.match(/[0-9a-z]+$/)).toBeTruthy()
     })
     test('should be alphabet with capital Letters  only',()=>{
         let random=randomString.generate({charset:'alphabet',length:6,upperCaseOnly:true})
-        expect(random.match(/[0-9A-F]+$/)).toBeTruthy()
+        expect(random.match(/[0-9A-Z]+$/)).toBeTruthy()
     })
     test('should be symbols with alphanumeric Letters  only',()=>{
         let random=randomString.generate({insertSymbol:true})
@@ -61,14 +61,15 @@ describe('testing with given options',()=>{
     })
     test('should be symbols with alphanumeric small letters  only',()=>{
         let random=randomString.generate({insertSymbol:true,lowerCaseOnly:true})
+       console.log(random)
         expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-z]+$/)).toBeTruthy()
     })
     test('should be symbols with alphanumeric capital letters  only',()=>{
-        let random=randomString.generate({insertSymbol:true,upperCaseOnly:true})
-        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/]+[0-9a-z]/)).toBeTruthy()
+        let random=randomString.generate({insertSymbol:true,upperCaseOnly:true,length:5})
+        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/]+[0-9A-Z]/)).toBeTruthy()
     })
     test('should be symbols with given provided number',()=>{
         let random=randomString.generate({insertSymbol:true,range:"123abc",length:6})
-        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/]+[1-3a-c]/)).toBeTruthy()
+        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/1-3a-c]/)).toBeTruthy()
     })
 })

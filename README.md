@@ -121,18 +121,19 @@ To be more specific you can pass an object for more flexibility.This are the lis
 ``` ts
 type options={
    charset?:"alphanumeric"|"number"|"alphabet"|"hex"|"binary"|"octal",
-   range?:string, //  string range provided by the user
-   length?: number, // length of the cahracter to genrated 
-   insertSymbol?:boolean, //insert symbol
-   upperCaseOnly?:boolean, //uppercase letters only 
-   lowerCaseOnly?:boolean, //lowerCase letters only   
- }
+   lowerCaseOnly?:boolean, //disable capital letter
+   range?:string, // 13rea
+   length: number,
+   upperCaseOnly?:boolean, 
+   insertSymbol?:boolean,
+   symbolsOnly:boolean   
+}
 ```
 passing down the options.Generate string only in the given string range
 
 ```js
 randomeString.generate({
-  char:'abc123',
+  range:'abc123',
   length:6
  });
 
@@ -148,23 +149,26 @@ length:10
 randomstring.generate({
 charset:'hex', 
 length:6
-})
-// C0faDB
+})// C0faDB
 ```
 You can also insert symbols if you pass set the `insertSymbol` option to true. But it doesn't work for binary or octal or hex charset option. 
 ``` js
 randomString.generate({
 insertSymbol:true
 })
+//bd@MK8ˆIvpGVoorO{FJkf]iMz,{1+-8g
 ```
->>816862
+You can pass the option `upperCaseOnly` to make the string only capital and `lowerCaseOnly` to make the string lowercase
 
-randomString.enerate(
-  {charset:'hex',
-length:6,
-disableSmallLetters:true})
->>ff6108
-
+```js
+randomString.generate({
+  charset:'alphabet',
+  upperCaseOnly:true
+ }) //ODEISDGQXUGGOHHG
+randomString.generate({
+  lowerCaseOnly:true
+ }) //fnzkamf0svos4yso
+```
 randomString.generate(
   {insertSymbol:true,
   disableCapitalLetters:true})
