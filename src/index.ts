@@ -63,7 +63,7 @@ export const generate = (option: number | options) => {
 };
 
 export const generateUnicodeEmoji = (length: number) => {
-  let len = length ? length : 161;
+  let len = length ? length : 16;
   let result = '';
   const charactersLength = emojis.length;
   for (let i = 0; i < len; i += 1) {

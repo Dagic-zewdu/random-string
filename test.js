@@ -57,9 +57,11 @@ describe('testing with given options',()=>{
     })
     test('should be symbols with number  only',()=>{
         let random=randomString.generate({insertSymbol:true,charset:"number"})
+        console.log("Symbol and number : "+random);
         expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/+0-9]+$/)).toBeTruthy()
     })
     test('should be symbols with alphanumeric small letters  only',()=>{
+
         let random=randomString.generate({insertSymbol:true,lowerCaseOnly:true})
        console.log(random)
         expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-z]+$/)).toBeTruthy()

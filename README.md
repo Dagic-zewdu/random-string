@@ -11,11 +11,13 @@ Here's why:
 
 To start to use this on local machine build then first Test the program using the test.js  
 
-Install node modules 
+Install node modules
+
 * npm
-  ```sh
-  npm install random-string
-  ```
+ 
+```
+npm install random-string
+```
 * yarn 
 
 ```
@@ -100,13 +102,18 @@ randomString.generate({
 })
  // ?[]}$'&,{]
 ```
+For fun you can also generate random emojis using `generateUnicodeEmoji(length)`
 
+```js
+randomString.generateUnicodeEmoji(1) //🍍
+```
 ## API
+
 randomString
 
-`generate(option)`
+`generate(option|length)`
 
- * options:
+ * option:
 
   * length: define the length of the output default 16   [Optional]
 
@@ -130,36 +137,24 @@ randomString
 
     - upperCaseOnly : Only Capital Leters are used to generate the output [Optional]
 
-    - disableCapitalLetters : Only Small Leters are used to generate the output [Optional]
+    - lowerCaseOnly : Only Small Leters are used to generate the output [Optional]
 
+  * symbols only:
 
+    - used to generate symbols only
+
+`generateUnicodeEmoji(length)`
+   - generates random emojis
 <!-- ROADMAP -->
 ## Tests
 - npm install 
 - npm run test
-## Roadmap
-- [x] Generate alphanumeric, numbers , Alphabet, Octal, Hex, Binary 
-- [x] Generate Symbols
-- [ ] Generate with Advanced Symbols
-- [ ] Generate Numbers with Symbols
 
 
 See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Installation
-
-
-<!-- 1. Get a free API Key at [https://example.com](https://example.com) -->
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Dagic-zewdu/random-string.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
 ## Authors
 
 ### Author 1
@@ -177,7 +172,7 @@ See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a
 - LinkedIn: [sentayhu-berhanu](https://www.linkedin.com/in/sentayhu-berhanu-6376579a/)
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contribution
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -216,18 +211,3 @@ Dagmawi Zewdu -   [@Dagi](https://twitter.com/dagmawi-zewdu) - dagmawizewdu@gmai
 Sentayhu Berhanu- [@Sentayhu](https://twitter.com/VoltageBerhanu) - sentayhuberhanu19@gmail.com
 
 Project Link: [https://github.com/Dagic-zewdu/random-string](https://github.com/Dagic-zewdu/random-string)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS
-## Acknowledgments -->
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.typescriptlang.org/ -->
