@@ -67,7 +67,7 @@ export const generateUnicodeEmoji = (length: number) => {
   let result = '';
   const charactersLength = emojis.length;
   for (let i = 0; i < len; i += 1) {
-    result += emojis[Math.floor(Math.random() * charactersLength)].trim(); 
+    result += emojis[Math.floor(Math.random() * charactersLength)].trim();
   }
   return result;
 };
