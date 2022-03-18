@@ -68,17 +68,17 @@ randomeString.generate({
 ```
 You can set also set type of string
 ```js
-randomstring.generate({
+randomString.generate({
 charset:'number',
 length:10
 }) //2342612198
 
-randomstring.generate({
+randomString.generate({
 charset:'alphabet',
 length:10
 }) //SoWhopDFTb
 
-randomstring.generate({
+randomString.generate({
 charset:'hex', 
 length:6
 })// C0faDB
