@@ -51,10 +51,7 @@ describe('testing with given options',()=>{
         let random=randomString.generate({charset:'alphabet',length:6,upperCaseOnly:true})
         expect(random.match(/[0-9A-Z]+$/)).toBeTruthy()
     })
-    test('should be symbols with alphanumeric Letters  only',()=>{
-        let random=randomString.generate({insertSymbol:true})
-        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9a-zA-Z]+$/)).toBeTruthy()
-    })
+   
     test('should be symbols with number  only',()=>{
         let random=randomString.generate({insertSymbol:true,charset:"number"})
         console.log("Symbol and number : "+random);
