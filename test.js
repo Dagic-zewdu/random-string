@@ -68,7 +68,7 @@ describe('testing with given options',()=>{
     })
     test('should be symbols with alphanumeric capital letters  only',()=>{
         let random=randomString.generate({insertSymbol:true,upperCaseOnly:true,length:5})
-        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/]+[0-9A-Z]/)).toBeTruthy()
+        expect(random.match(/[-!$%^&*()_+|~=`{}\[\]:";<>?,.\/0-9A-Z]/)).toBeTruthy()
     })
     test('should be symbols with given provided number',()=>{
         let random=randomString.generate({insertSymbol:true,range:"123abc",length:6})
