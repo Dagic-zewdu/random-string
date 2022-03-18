@@ -4,4 +4,4 @@ import { options } from './types';
  * @returns- random string generated
  */
 export declare const generate: (option: number | options) => string;
-export declare const generateUnicodeEmoji: (length: number) => string[];
+export declare const generateUnicodeEmoji: (length: number) => string;
