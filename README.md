@@ -3,9 +3,13 @@
 There are lots of scenarios which one can use our Random string generator the most known or the best scenario is for
 
    1.Password genertion 
+   
    2.Token generation.
+   
    3.Testing
+   
    4.id generation
+   
 This package generate random string based on the given parameters.
 
 ## Getting Started
