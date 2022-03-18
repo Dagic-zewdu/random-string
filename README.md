@@ -33,6 +33,10 @@ const randomString = require("random-string");
 randomString.generate(); // xabgtl3yb1Ac0MrQ
 
 ```
+or you can use  `import` statment
+```js
+import randomString from 'random-string'
+```
 If you want some length to random string pass a number to the function.
 
 ```js
@@ -64,12 +68,17 @@ randomeString.generate({
 ```
 You can set also set type of string
 ```js
-randomstring.generate({
+randomString.generate({
 charset:'number',
 length:10
 }) //2342612198
 
-randomstring.generate({
+randomString.generate({
+charset:'alphabet',
+length:10
+}) //SoWhopDFTb
+
+randomString.generate({
 charset:'hex', 
 length:6
 })// C0faDB
