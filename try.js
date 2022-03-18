@@ -1,10 +1,9 @@
 const randomString =require('./lib/index')
 
 let str=randomString.generate({
-    range:'abc',
-    insertSymbol:true
+     symbolsOnly:true,
+     length:10
 })
 let emoji=randomString.generateUnicodeEmoji(1)
 
 console.log(str)
-console.log(emoji)

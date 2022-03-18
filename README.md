@@ -1,61 +1,4 @@
-<div id="top"></div>
-
-<br />
-<div>
-<!--   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
-
-  <h1>Random-String-Generator</h1>
-
-  <p>
-    This is Free-to-use Best Rndom String Generator 
-    <br />
-    <a href="https://github.com/Dagic-zewdu/random-string"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-   <!-- <a href="https://github.com/Dagic-zewdu/random-string">View Demo</a>  -->
-    ·
-    <a href="https://github.com/Dagic-zewdu/random-string/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Dagic-zewdu/random-string/issues">Request Feature</a>
-  </p>
-</div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+## About The Package
 
 There are lots of scenarios which one can use our Random string generator the most known or the best scenario is for password genertion and Token generation.
 There are many Random Genertor available on GitHub; however, We didn't find one that really suited our needs a a devloper.
@@ -64,19 +7,6 @@ Here's why:
 * This Random string Genrator has many more different features from the others one can use. 
 * Executionn time  <b>( it is much faster) </b>
 * More Security
-
-
-
-Use the `index.ts` file to get started.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
 To start to use this on local machine build then first Test the program using the test.js  
@@ -92,15 +22,6 @@ Install node modules
 yarn add random-string
 
 ```
-
-<!-- 4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API'; -->
-  
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ## Usage
 
@@ -121,12 +42,12 @@ To be more specific you can pass an object for more flexibility.This are the lis
 ``` ts
 type options={
    charset?:"alphanumeric"|"number"|"alphabet"|"hex"|"binary"|"octal",
-   lowerCaseOnly?:boolean, //disable capital letter
-   range?:string, // 13rea
-   length: number,
-   upperCaseOnly?:boolean, 
-   insertSymbol?:boolean,
-   symbolsOnly:boolean   
+   lowerCaseOnly?:boolean, //only lowercase letter
+   range?:string, // user provided charset
+   length: number, //length of the character if not provided
+   upperCaseOnly?:boolean, // only lowercase 
+   insertSymbol?:boolean, // only uppercase
+   symbolsOnly:boolean   //only symbols
 }
 ```
 passing down the options.Generate string only in the given string range
@@ -164,24 +85,26 @@ You can pass the option `upperCaseOnly` to make the string only capital and `low
 randomString.generate({
   charset:'alphabet',
   upperCaseOnly:true
- }) //ODEISDGQXUGGOHHG
+ }) 
+ //ODEISDGQXUGGOHHG
 randomString.generate({
   lowerCaseOnly:true
- }) //fnzkamf0svos4yso
+ })
+  //fnzkamf0svos4yso
 ```
-randomString.generate(
-  {insertSymbol:true,
-  disableCapitalLetters:true})
->>qnbnlog0nmivs4y5
->>
-<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+You can get symbols only if you set option ` symbolsOnly:true,`
+```js
+randomString.generate({
+     symbolsOnly:true,
+     length:10
+})
+ // ?[]}$'&,{]
+```
 
 ## API
 randomString
 
-- generate(option)
+`generate(option)`
 
  * options:
 
@@ -205,7 +128,7 @@ randomString
 
   * capitalization:
 
-    - disableSmallLetters : Only Capital Leters are used to generate the output [Optional]
+    - upperCaseOnly : Only Capital Leters are used to generate the output [Optional]
 
     - disableCapitalLetters : Only Small Leters are used to generate the output [Optional]
 
