@@ -1,19 +1,42 @@
-import { hex,symbols, options, alphabet, alphanumeric } from "./types";
+import {
+  hex,
+  symbols,
+  options,
+  alphabet,
+  alphanumeric,
+  number,
+  alphabetSymbol,
+  numberSymbol,
+  alphabetNumericSymbol,
+} from './types';
 
-export const checkOptions=(result:string,option:options)=>{
-    let newResult=result
-    if(option.insertSymbol){
-        const characters= option.charset==="hex"?(hex+symbols):option.charset==="alphabet"?(alphabet+symbols): (alphanumeric+symbols);
-        const charactersLength = characters.length;
-        for (let i = 0; i < option.length; i += 1) {
-          newResult += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }  
+export const checkOptions = (result: string, option: options) => {
+  let newResult = result;
+  if (option.insertSymbol) {
+    const characters = option.range
+      ? symbols + option.range + symbols
+      : option.charset === 'number'
+      ? numberSymbol
+      : option.charset === 'alphabet'
+      ? alphabetSymbol
+      : alphabetNumericSymbol;
+    const charactersLength = characters.length;
+    for (let i = 0; i < option.length; i += 1) {
+      newResult += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-    if(option.disableCapitalLetters){
-       newResult=result.toLowerCase()
+  }
+  if (option.symbolsOnly) {
+    newResult = '';
+    const charactersLength = symbols.length;
+    for (let i = 0; i < option.length; i += 1) {
+      newResult += symbols.charAt(Math.floor(Math.random() * charactersLength));
     }
-    else if(option.disableSmallLetters){
-    newResult=result.toUpperCase()
-    }
-     return newResult
-}
+  }
+  if (option.lowerCaseOnly) {
+    return newResult.toLowerCase();
+  }
+  if (option.upperCaseOnly) {
+    return newResult.toUpperCase();
+  }
+  return newResult;
+};
