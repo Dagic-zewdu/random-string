@@ -2,7 +2,7 @@
 
 There are lots of scenarios which one can use our Random string generator the most known or the best scenario is for
 
-   1.Password genertion 
+   1.Password generation 
    
    2.Token generation.
    
