@@ -34,13 +34,13 @@ yarn add random-string
 
 For generating a random string you call `generate()` function.By default it generate 16 character string.
 ``` js
-const randomString = require("random-string");
+const randomString = require("random_string");
 randomString.generate(); // xabgtl3yb1Ac0MrQ
 
 ```
 or you can use  `import` statment
 ```js
-import randomString from 'random-string'
+import randomString from 'random_string'
 ```
 If you want some length to random string pass a number to the function.
 
