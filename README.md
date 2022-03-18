@@ -21,12 +21,12 @@ Install node modules
 * npm
  
 ```
-npm install random-string
+npm install random_string
 ```
 * yarn 
 
 ```
-yarn add random-string
+yarn add random_string
 
 ```
 
