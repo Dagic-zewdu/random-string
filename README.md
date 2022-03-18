@@ -21,12 +21,12 @@ Install node modules
 * npm
  
 ```
-npm install random_string
+npm install randomized-string
 ```
 * yarn 
 
 ```
-yarn add random_string
+yarn add randomized-string
 
 ```
 
@@ -34,13 +34,13 @@ yarn add random_string
 
 For generating a random string you call `generate()` function.By default it generate 16 character string.
 ``` js
-const randomString = require("random_string");
+const randomString = require("randomized-string");
 randomString.generate(); // xabgtl3yb1Ac0MrQ
 
 ```
 or you can use  `import` statment
 ```js
-import randomString from 'random_string'
+import randomString from 'randomized-string'
 ```
 If you want some length to random string pass a number to the function.
 
