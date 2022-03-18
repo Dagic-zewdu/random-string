@@ -1,0 +1,40 @@
+{
+  "name": "random-string",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index",
+  "typings": "lib/index",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "jest",
+    "dev": "tsc -p . -w",
+    "try": "nodemon try.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dagic-zewdu/random-string.git"
+  },
+  "keywords": [
+    "random",
+    "string",
+    "id",
+    "random string",
+    "random id",
+    "token",
+    "token generator",
+    "empoji",
+    "random emogi generator",
+    "token generator"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dagic-zewdu/random-string/issues"
+  },
+  "homepage": "https://github.com/Dagic-zewdu/random-string#readme",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.6.2"
+  }
+}
