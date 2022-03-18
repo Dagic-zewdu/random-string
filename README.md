@@ -1,12 +1,13 @@
 ## About The Package
 
-There are lots of scenarios which one can use our Random string generator the most known or the best scenario is for password genertion and Token generation.
-There are many Random Genertor available on GitHub; however, We didn't find one that really suited our needs a a devloper.
+There are lots of scenarios which one can use our Random string generator the most known or the best scenario is for
 
-Here's why:
-* This Random string Genrator has many more different features from the others one can use. 
-* Executionn time  <b>( it is much faster) </b>
-* More Security
+   1.Password genertion 
+   2.Token generation.
+   3.Testing
+   4.id generation
+This package generate random string based on the given parameters.
+
 ## Getting Started
 
 To start to use this on local machine build then first Test the program using the test.js  
