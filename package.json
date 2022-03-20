@@ -1,6 +1,6 @@
 {
   "name": "randomized-string",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "lib/index",
   "typings": "lib/index",
