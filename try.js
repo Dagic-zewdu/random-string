@@ -3,7 +3,7 @@ const randomString =require('./lib/index')
 
 let str=randomString.generate({
 length:10,
-prefix: "pre-"
+suffix: "-suff"
 })
 let emoji=randomString.generateUnicodeEmoji(1) 
  

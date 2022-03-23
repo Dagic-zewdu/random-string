@@ -90,6 +90,19 @@ charset:'hex',
 length:6
 })// C0faDB
 ```
+You can insert prefix `prefix` or `suffix` characters. Note that the length of the prefix or suffix is not counted with the length of the random string.
+
+```js
+randomString.generate({
+length:10,
+prefix: "pre-"
+}) //pre-GaKdvH8Bro
+randomString.generate({
+length:10,
+suffix: "-suff"
+}) //0YcCeMISpE-suff
+
+```   
 You can also insert symbols if you pass set the `insertSymbol` option to true. But it doesn't work for binary or octal or hex charset option. 
 ``` js
 randomString.generate({
@@ -158,6 +171,12 @@ randomString
   * symbols only:
 
     - used to generate symbols only
+
+  * prefix:
+    - Adds a character before the random string
+  
+  * suffix:
+     - Adds character after the random string 
 
 `generateUnicodeEmoji(length)`
    - generates random emojis
