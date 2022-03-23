@@ -8,9 +8,9 @@ export type options = {
   length: number;
   upperCaseOnly?: boolean;
   insertSymbol?: boolean;
-  symbolsOnly: boolean;
-  prefix: string;
-  suffix: string;
+  symbolsOnly?: boolean;
+  prefix?: string;
+  suffix?: string;
 };
 
 export const hex = '0123456789ABCDEFabcdef';
