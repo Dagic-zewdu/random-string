@@ -2,8 +2,8 @@ const randomString =require('./lib/index')
 
 
 let str=randomString.generate({
-charset:'alphabet',
-length:10
+length:10,
+prefix: "pre-"
 })
 let emoji=randomString.generateUnicodeEmoji(1) 
  

@@ -2,13 +2,15 @@
  *
  */
 export declare type options = {
-    charset?: "alphanumeric" | "number" | "alphabet" | "hex" | "binary" | "octal";
+    charset?: 'alphanumeric' | 'number' | 'alphabet' | 'hex' | 'binary' | 'octal';
     lowerCaseOnly?: boolean;
     range?: string;
     length: number;
     upperCaseOnly?: boolean;
     insertSymbol?: boolean;
     symbolsOnly: boolean;
+    prefix: string;
+    suffix: string;
 };
 export declare const hex = "0123456789ABCDEFabcdef";
 export declare const symbols: string;

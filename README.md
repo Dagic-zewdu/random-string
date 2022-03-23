@@ -58,7 +58,9 @@ type options={
    length: number, //length of the character if not provided
    upperCaseOnly?:boolean, // only lowercase 
    insertSymbol?:boolean, // only uppercase
-   symbolsOnly:boolean   //only symbols
+   symbolsOnly:boolean,  //only symbols
+   prefix: string, // add before string
+   suffix: string // add after the string
 }
 ```
 passing down the options.Generate string only in the given string range
