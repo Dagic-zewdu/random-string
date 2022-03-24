@@ -32,6 +32,13 @@ export const checkOptions = (result: string, option: options) => {
       newResult += symbols.charAt(Math.floor(Math.random() * charactersLength));
     }
   }
+  if (option.prefix) {
+    newResult = option.prefix + newResult;
+  }
+  if (option.suffix) {
+    newResult = newResult + option.suffix;
+  }
+
   if (option.lowerCaseOnly) {
     return newResult.toLowerCase();
   }

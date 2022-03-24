@@ -58,10 +58,14 @@ type options={
    length: number, //length of the character if not provided
    upperCaseOnly?:boolean, // only lowercase 
    insertSymbol?:boolean, // only uppercase
-   symbolsOnly:boolean   //only symbols
+   symbolsOnly:boolean,  //only symbols
+   prefix: string, // add before string
+   suffix: string // add after the string
 }
 ```
-passing down the options.Generate string only in the given string range
+### passing down the options
+
+ Generate string only in the given string range
 
 ```js
 randomeString.generate({
@@ -88,6 +92,19 @@ charset:'hex',
 length:6
 })// C0faDB
 ```
+You can insert prefix `prefix` or `suffix` characters. Note that the length of the prefix or suffix is not counted with the length of the random string.
+
+```js
+randomString.generate({
+length:10,
+prefix: "pre-"
+}) //pre-GaKdvH8Bro
+randomString.generate({
+length:10,
+suffix: "-suff"
+}) //0YcCeMISpE-suff
+
+```   
 You can also insert symbols if you pass set the `insertSymbol` option to true. But it doesn't work for binary or octal or hex charset option. 
 ``` js
 randomString.generate({
@@ -156,6 +173,12 @@ randomString
   * symbols only:
 
     - used to generate symbols only
+
+  * prefix:
+    - Adds a character before the random string
+  
+  * suffix:
+     - Adds character after the random string 
 
 `generateUnicodeEmoji(length)`
    - generates random emojis
