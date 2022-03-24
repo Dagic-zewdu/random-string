@@ -63,7 +63,9 @@ type options={
    suffix: string // add after the string
 }
 ```
-passing down the options.Generate string only in the given string range
+### passing down the options
+
+ Generate string only in the given string range
 
 ```js
 randomeString.generate({
