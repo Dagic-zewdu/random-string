@@ -203,7 +203,7 @@ $ randome-string upperCaseOnly=true charset=alphanumeric
 
 $ randome-string  charset=alphanumeric insertSymbol=true length=8
 
- // S8CIza8v^dio/Axz
+ // S8Cza8v^
 
  $ randome-string generateUnicodeEmoji length=5  
 
