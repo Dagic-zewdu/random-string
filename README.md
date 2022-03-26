@@ -188,21 +188,27 @@ randomString
 - npm run test
 
 ## Command Line Usage
-
+```js
 $ npm install randomized-string
+
 $ yarn add randomized-string
 
-$ randome-string            
+$ randome-string       
+
  // Urp0YDaIHWn7YCCF
 
 $ randome-string upperCaseOnly=true charset=alphanumeric
+
  // DX5ACJP1FJN5Q79Z
 
 $ randome-string  charset=alphanumeric insertSymbol=true length=8
+
  // S8CIza8v^dio/Axz
 
  $ randome-string generateUnicodeEmoji length=5  
+
  // ⏺️💤👇😰🗳️
+```
 
 See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a full list of proposed features (and known issues).
 
