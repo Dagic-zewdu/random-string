@@ -193,19 +193,19 @@ $ npm install randomized-string
 
 $ yarn add randomized-string
 
-$ randome-string       
+$ randomized-string        
 
  // Urp0YDaIHWn7YCCF
 
-$ randome-string upperCaseOnly=true charset=alphanumeric
+$ randomized-string  upperCaseOnly=true charset=alphanumeric
 
  // DX5ACJP1FJN5Q79Z
 
-$ randome-string  charset=alphanumeric insertSymbol=true length=8
+$ randomized-string   charset=alphanumeric insertSymbol=true length=8
 
  // S8Cza8v^
 
- $ randome-string generateUnicodeEmoji length=5  
+ $ randomized-string  generateUnicodeEmoji length=5  
 
  // ⏺️💤👇😰🗳️
 ```

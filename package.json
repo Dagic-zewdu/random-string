@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/index",
   "bin":{
-    "randome-string":"bin/randomeString" 
+    "randomized-string":"bin/randomString" 
   },
   "typings": "lib/index",
   "scripts": {
