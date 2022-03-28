@@ -1,0 +1,75 @@
+#!/usr/bin/env node
+
+const randomString = require("..");
+let Display=true;
+const options = {};
+const emojilen = {};
+for (let i = 2, j = process.argv.length; i < j; i++) {
+    let arg = process.argv[i];
+    
+    if (arg.search('length') >= 0) {
+      let length = arg.split('=')[1];
+      
+      if (length)
+        options.length = parseInt(length);
+    }
+    else if (arg.search('charset') >= 0) {
+        let charset = arg.split('=')[1];
+        
+        if (charset)
+          options.charset = charset;
+      }
+      else if (arg.search('lowerCaseOnly') >= 0) {
+        let lowerCaseOnly = arg.split('=')[1];
+        
+        if (lowerCaseOnly)
+          options.lowerCaseOnly = lowerCaseOnly;
+      }
+      else if (arg.search('insertSymbol') >= 0) {
+        let  insertSymbol = arg.split('=')[1];
+        
+        if ( insertSymbol)
+          options.insertSymbol =  insertSymbol;
+      }
+      else if (arg.search('upperCaseOnly') >= 0) {
+        let  upperCaseOnly = arg.split('=')[1];
+        
+        if ( upperCaseOnly)
+          options.upperCaseOnly = upperCaseOnly;
+      }
+      else if (arg.search('symbolsOnly') >= 0) {
+        let  symbolsOnly = arg.split('=')[1];
+        
+        if (symbolsOnly)
+          options.symbolsOnly = symbolsOnly;
+      }
+      else if (arg.search('prefix') >= 0) {
+        let  prefix = arg.split('=')[1];
+        
+        if (prefix)
+          options.prefix = prefix;
+      }
+      else if (arg.search('suffix') >= 0) {
+        let  suffix = arg.split('=')[1];
+        
+        if (suffix)
+          options.suffix = suffix;
+      }
+      else if (arg.search('generateUnicodeEmoji') >= 0) {
+        Display =false;
+        let  generateUnicodeEmoji = arg.split('=')[1];
+
+        if (generateUnicodeEmoji)
+        emojilen.generateUnicodeEmoji = generateUnicodeEmoji;
+      }
+}
+
+let result = randomString.generate(options);
+let emoji=randomString.generateUnicodeEmoji(options.length);
+if(Display===true){
+console.log('\x1b[32m',result);
+}
+else{
+console.log('\x1b[34m',emoji);
+}
+  console.log('\x1b[0m');   //reset

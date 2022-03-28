@@ -3,6 +3,9 @@
   "version": "1.0.3",
   "description": "",
   "main": "lib/index",
+  "bin":{
+    "randomized-string":"bin/randomString" 
+  },
   "typings": "lib/index",
   "scripts": {
     "build": "tsc -p .",
