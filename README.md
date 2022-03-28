@@ -138,6 +138,31 @@ For fun you can also generate random emojis using `generateUnicodeEmoji(length)`
 ```js
 randomString.generateUnicodeEmoji(1) //🍍
 ```
+## Command Line Usage
+
+First the package should be installed globally 
+
+```js
+$ npm install randomized-string -g
+
+$ yarn add randomized-string
+
+$ randomized-string        
+
+ // Urp0YDaIHWn7YCCF
+
+$ randomized-string  upperCaseOnly=true charset=alphanumeric
+
+ // DX5ACJP1FJN5Q79Z
+
+$ randomized-string   charset=alphanumeric insertSymbol=true length=8
+
+ // S8Cza8v^
+
+ $ randomized-string  generateUnicodeEmoji length=5  
+
+ // ⏺️💤👇😰🗳️
+```
 ## API
 
 randomString
@@ -187,33 +212,15 @@ randomString
 - npm install 
 - npm run test
 
-## Command Line Usage
-```js
-$ npm install randomized-string
-
-$ yarn add randomized-string
-
-$ randomized-string        
-
- // Urp0YDaIHWn7YCCF
-
-$ randomized-string  upperCaseOnly=true charset=alphanumeric
-
- // DX5ACJP1FJN5Q79Z
-
-$ randomized-string   charset=alphanumeric insertSymbol=true length=8
-
- // S8Cza8v^
-
- $ randomized-string  generateUnicodeEmoji length=5  
-
- // ⏺️💤👇😰🗳️
-```
-
 See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+## support us
+[☕  Buy me a coffee](https://www.buymeacoffee.com/dagizewdudc)
+
+- You can also give as star to our repo.
 ## Authors
 
 ### Author 1
@@ -250,16 +257,6 @@ Don't forget to give the project a star! Thanks again!
 
 * [TypeScript](https://www.typescriptlang.org/)
 * [JavaScript](https://www.javascript.com/)
-
-<!-- LICENSE
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p> -->
-
-## support us
-[☕  Buy me a coffee](https://www.buymeacoffee.com/dagizewdudc)
 
 
 <!-- CONTACT -->
