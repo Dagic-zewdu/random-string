@@ -58,10 +58,14 @@ type options={
    length: number, //length of the character if not provided
    upperCaseOnly?:boolean, // only lowercase 
    insertSymbol?:boolean, // only uppercase
-   symbolsOnly:boolean   //only symbols
+   symbolsOnly:boolean,  //only symbols
+   prefix: string, // add before string
+   suffix: string // add after the string
 }
 ```
-passing down the options.Generate string only in the given string range
+### passing down the options
+
+ Generate string only in the given string range
 
 ```js
 randomeString.generate({
@@ -88,6 +92,19 @@ charset:'hex',
 length:6
 })// C0faDB
 ```
+You can insert prefix `prefix` or `suffix` characters. Note that the length of the prefix or suffix is not counted with the length of the random string.
+
+```js
+randomString.generate({
+length:10,
+prefix: "pre-"
+}) //pre-GaKdvH8Bro
+randomString.generate({
+length:10,
+suffix: "-suff"
+}) //0YcCeMISpE-suff
+
+```   
 You can also insert symbols if you pass set the `insertSymbol` option to true. But it doesn't work for binary or octal or hex charset option. 
 ``` js
 randomString.generate({
@@ -120,6 +137,33 @@ For fun you can also generate random emojis using `generateUnicodeEmoji(length)`
 
 ```js
 randomString.generateUnicodeEmoji(1) //🍍
+```
+## Command Line Usage
+
+First the package should be installed globally 
+
+```js
+$ npm install randomized-string -g
+
+$ yarn add randomized-string
+
+$ randomized-string        
+
+ // Urp0YDaIHWn7YCCF
+
+$ randomized-string  upperCaseOnly=true charset=alphanumeric
+
+ // DX5ACJP1FJN5Q79Z
+
+$ randomized-string   charset=alphanumeric insertSymbol=true length=8
+// S8Cza8v^
+
+$ randomized-string  prefix=pre-
+ //pre-KOyWstwcpA6sLaH3
+
+$ randomized-string  generateUnicodeEmoji length=5  
+
+ // ⏺️💤👇😰🗳️
 ```
 ## API
 
@@ -157,6 +201,12 @@ randomString
 
     - used to generate symbols only
 
+  * prefix:
+    - Adds a character before the random string
+  
+  * suffix:
+     - Adds character after the random string 
+
 `generateUnicodeEmoji(length)`
    - generates random emojis
 <!-- ROADMAP -->
@@ -164,11 +214,15 @@ randomString
 - npm install 
 - npm run test
 
-
 See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+## support us
+[☕  Buy me a coffee](https://www.buymeacoffee.com/dagizewdudc)
+
+- You can also give as star to our repo.
 ## Authors
 
 ### Author 1
@@ -205,16 +259,6 @@ Don't forget to give the project a star! Thanks again!
 
 * [TypeScript](https://www.typescriptlang.org/)
 * [JavaScript](https://www.javascript.com/)
-
-<!-- LICENSE
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p> -->
-
-## support us
-[☕  Buy me a coffee](https://www.buymeacoffee.com/dagizewdudc)
 
 
 <!-- CONTACT -->
