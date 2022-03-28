@@ -1,10 +1,10 @@
 {
   "name": "randomized-string",
-  "version": "1.0.3",
+  "version": "1.2.0",
   "description": "",
   "main": "lib/index",
-  "bin":{
-    "randomized-string":"bin/randomString" 
+  "bin": {
+    "randomized-string": "bin/randomString"
   },
   "typings": "lib/index",
   "scripts": {
