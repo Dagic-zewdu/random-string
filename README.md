@@ -156,10 +156,12 @@ $ randomized-string  upperCaseOnly=true charset=alphanumeric
  // DX5ACJP1FJN5Q79Z
 
 $ randomized-string   charset=alphanumeric insertSymbol=true length=8
+// S8Cza8v^
 
- // S8Cza8v^
+$ randomized-string  prefix=pre-
+ //pre-KOyWstwcpA6sLaH3
 
- $ randomized-string  generateUnicodeEmoji length=5  
+$ randomized-string  generateUnicodeEmoji length=5  
 
  // ⏺️💤👇😰🗳️
 ```
