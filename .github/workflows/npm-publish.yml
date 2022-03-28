@@ -5,7 +5,7 @@ name: Node.js Package
 
 on:
   release:
-    types: [created]
+    types: [created,updated]
     branches:
        - main
 
@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: npm link
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
