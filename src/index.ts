@@ -53,6 +53,7 @@ export const generate = (option: number | options) => {
     } else {
       const charactersLength = alphanumeric.length;
       for (let i = 0; i < option.length; i += 1) {
+        console.log(result);
         result += alphanumeric.charAt(Math.floor(Math.random() * charactersLength));
       }
       result = checkOptions(result, option);
