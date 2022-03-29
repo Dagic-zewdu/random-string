@@ -145,7 +145,7 @@ First the package should be installed globally
 ```js
 $ npm install randomized-string -g
 
-$ yarn add randomized-string
+$ yarn add randomized-string -g
 
 $ randomized-string        
 
