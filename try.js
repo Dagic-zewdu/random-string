@@ -3,7 +3,7 @@ const randomString =require('./lib/index')
 
 let str=randomString.generate({
 length:10,
-charset:"aplhabet",
+range:"feven",
 insertSymbol:true,
 upperCaseOnly:true
 })
