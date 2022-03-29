@@ -13,6 +13,7 @@ import {
 export const checkOptions = (result: string, option: options) => {
   let newResult = result;
   if (option.insertSymbol) {
+    newResult = '';
     const characters = option.range
       ? symbols + option.range + symbols
       : option.charset === 'number'
@@ -21,7 +22,7 @@ export const checkOptions = (result: string, option: options) => {
       ? alphabetSymbol
       : alphabetNumericSymbol;
     const charactersLength = characters.length;
-    for (let i = 0; i < option.length; i += 1) {
+    for (let i = 0; i < option.length; i++) {
       newResult += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
   }
