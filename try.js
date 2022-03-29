@@ -3,9 +3,9 @@ const randomString =require('./lib/index')
 
 let str=randomString.generate({
 length:10,
-range:"feven",
+range: "Feven",
 insertSymbol:true,
-upperCaseOnly:true
+insertSymbol:true,
 })
 
 console.log(str) 

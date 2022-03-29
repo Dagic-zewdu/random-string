@@ -20,7 +20,6 @@ export const generate = (option: number | options) => {
       option.length = 16;
     }
     if (option.range) {
-      //sdfd
       const characters = option.range;
       const charactersLength = characters.toString().length;
       for (let i = 0; i < option.length; i += 1) {
@@ -47,7 +46,7 @@ export const generate = (option: number | options) => {
     } else if (option.charset === 'alphabet') {
       const charactersLength = alphabet.length;
       for (let i = 0; i < option.length; i += 1) {
-        result +=alphabet.charAt(Math.floor(Math.random() * charactersLength));
+        result += alphabet.charAt(Math.floor(Math.random() * charactersLength));
       }
       result = checkOptions(result, option);
     } else {
@@ -65,7 +64,7 @@ export const generate = (option: number | options) => {
 export const generateUnicodeEmoji = (length: number) => {
   let len = length ? length : 16;
   let result = '';
-  
+
   const charactersLength = emojis.length;
   for (let i = 0; i < len; i += 1) {
     result += emojis[Math.floor(Math.random() * charactersLength)].trim();
