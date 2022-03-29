@@ -55,9 +55,9 @@ type options={
    charset?:"alphanumeric"|"number"|"alphabet"|"hex"|"binary"|"octal",
    lowerCaseOnly?:boolean, //only lowercase letter
    range?:string, // user provided charset
-   length: number, //length of the character if not provided
+   length: number, //length of the character if not provided generates 16 characters by default
    upperCaseOnly?:boolean, // only uppercase letter 
-   insertSymbol?:boolean, // insert symbol to given charset
+   insertSymbol?:boolean, // insert symbols to given charset
    symbolsOnly:boolean,  //only symbols
    prefix: string, // add before string
    suffix: string // add after the string
@@ -145,7 +145,7 @@ First the package should be installed globally
 ```js
 $ npm install randomized-string -g
 
-$ yarn add randomized-string -g
+$ yarn add randomized-string
 
 $ randomized-string        
 
