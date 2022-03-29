@@ -56,8 +56,8 @@ type options={
    lowerCaseOnly?:boolean, //only lowercase letter
    range?:string, // user provided charset
    length: number, //length of the character if not provided
-   upperCaseOnly?:boolean, // only lowercase 
-   insertSymbol?:boolean, // only uppercase
+   upperCaseOnly?:boolean, // only uppercase letter 
+   insertSymbol?:boolean, // insert symbol to given charset
    symbolsOnly:boolean,  //only symbols
    prefix: string, // add before string
    suffix: string // add after the string
