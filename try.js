@@ -2,11 +2,10 @@ const randomString =require('./lib/index')
 
 
 let str=randomString.generate({
-    charset:"alpabet", 
-    insertSymbol:true, 
-    length:4
+length:10,
+range:"feven",
+insertSymbol:true,
+upperCaseOnly:true
 })
-let emoji=randomString.generateUnicodeEmoji(1) 
- 
-console.log("4 must be ",str) 
-console.log(emoji)
+
+console.log(str) 

@@ -1,11 +1,12 @@
 import { checkOptions } from './check.option';
 import { emojis } from './emoji';
 import { alphabet, alphanumeric, hex, options } from './types';
-
+//import {cryptoRandom} from './cryptoRandom';
 /**
  * @param option- could be number which is the length of the string to be generated || could be option {
  * @returns- random string generated
  */
+ 
 export const generate = (option: number | options) => {
   let result: string | number = '';
   if (typeof option === 'number' || !option) {
@@ -13,7 +14,7 @@ export const generate = (option: number | options) => {
     const characters = alphanumeric;
     const charactersLength = characters.length;
     for (let i = 0; i < opt; i += 1) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      result += characters.charAt(Math.floor(Math.random()*charactersLength));
     }
   } else if (typeof option === 'object') {
     if (!option.length) {
