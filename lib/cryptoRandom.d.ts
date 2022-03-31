@@ -1,1 +1,2 @@
-export declare const cryptoRandom: (maxValue: any) => number;
+declare var getRandomValues: any;
+declare var array: Uint8Array;
