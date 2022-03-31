@@ -29,15 +29,15 @@ export const generate = (option: number | options) => {
       }
       result = checkOptions(result, option);
     } else if (option.charset === 'number') {
-      result = Math.round(Math.random() * Math.pow(10, option.length)).toString();
-      result = checkOptions(result, option);
+      result = Math.round(getCryptoRandomInt( Number(Math.pow(10, option.length)).toString()));
+      result = checkOptions(String(result), option);
     } else if (option.charset === 'binary') {
       for (let i = 0; i < option.length; ++i) {
-        result += Math.floor(Math.random() * 2);
+        result += Math.floor(getCryptoRandomInt(2));
       }
     } else if (option.charset === 'octal') {
       for (let i = 0; i < option.length; ++i) {
-        result += Math.floor(Math.random() * 8);
+        result += Math.floor(getCryptoRandomInt(8) );
       }
     } else if (option.charset === 'hex') {
       const charactersLength = hex.length;
