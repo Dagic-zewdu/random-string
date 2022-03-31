@@ -15,7 +15,7 @@ export const checkOptions = (result: string, option: options) => {
   if (option.insertSymbol) {
     newResult = '';
     const characters = option.range
-      ? symbols + option.range + symbols
+      ? option.range + symbols + option.range
       : option.charset === 'number'
       ? numberSymbol
       : option.charset === 'alphabet'

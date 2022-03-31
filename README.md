@@ -55,7 +55,7 @@ type options={
    charset?:"alphanumeric"|"number"|"alphabet"|"hex"|"binary"|"octal",
    lowerCaseOnly?:boolean, //only lowercase letter
    range?:string, // user provided charset
-   length: number, //length of the character if not provided generates 16 characters by defqault
+   length: number, //length of the character if not provided generates 16 characters by default
    upperCaseOnly?:boolean, // only uppercase letter 
    insertSymbol?:boolean, // insert symbols to given charset
    symbolsOnly:boolean,  //only symbols
