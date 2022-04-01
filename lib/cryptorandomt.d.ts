@@ -1,1 +1,1 @@
-export declare let getCryptoRandomInt: (max: any) => number;
+export declare let getCryptoRandomInt: (max: number) => number;
