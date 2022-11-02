@@ -230,7 +230,7 @@ See the [open issues](https://github.com/Dagic-zewdu/random-string/issues) for a
 👤 **Dagmawi Zewdu**
 
  - GitHub: [@Dagic-zewdu](https://github.com/Dagic-zewdu)
-- LinkedIn: [Dagi-Zewdu](https://www.linkedin.com/in/dagi-zewdu-21b835215)
+- LinkedIn: [Dagi-Zewdu](https://www.linkedin.com/in/dagic-zewdu/)
 
 ### Author 2
 
@@ -264,7 +264,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Dagmawi Zewdu -   [@Dagi](https://twitter.com/dagmawi-zewdu) - dagmawizewdu@gmail.com
+Dagmawi Zewdu -   [@Dagi](https://twitter.com/dagmawi-zewdu) - dagi.zewdu.dz@gmail.com
  
 Sentayhu Berhanu- [@Sentayhu](https://twitter.com/VoltageBerhanu) - sentayhuberhanu19@gmail.com
 
