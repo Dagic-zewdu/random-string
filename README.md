@@ -264,7 +264,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Dagmawi Zewdu -   [@Dagi](https://twitter.com/dagmawi-zewdu) - dagmawizewdu@gmail.com
+Dagmawi Zewdu -   [@Dagi](https://twitter.com/dagmawi-zewdu) - dagi.zewdu.dz@gmail.com
  
 Sentayhu Berhanu- [@Sentayhu](https://twitter.com/VoltageBerhanu) - sentayhuberhanu19@gmail.com
 
