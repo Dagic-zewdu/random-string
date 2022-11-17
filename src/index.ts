@@ -11,10 +11,7 @@ export const generate = (option: number | options) => {
   if (typeof option === 'number' || !option) {
     let opt = option ? option : 16;
     const characters = alphanumeric;
-    const charactersLength = characters.length;
-    for (let i = 0; i < opt; i += 1) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
+   result= compute(characters, opt, characters.length);
   } else if (typeof option === 'object') {
     if (!option.length) {
       option.length = 16;
@@ -22,9 +19,7 @@ export const generate = (option: number | options) => {
     if (option.range) {
       const characters = option.range;
       const charactersLength = characters.toString().length;
-      for (let i = 0; i < option.length; i += 1) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-      }
+      result= compute(characters,option.length, charactersLength);
       result = checkOptions(result, option);
     } else if (option.charset === 'number') {
       result = Math.round(Math.random() * Math.pow(10, option.length)).toString();
@@ -38,28 +33,25 @@ export const generate = (option: number | options) => {
         result += Math.floor(Math.random() * 8);
       }
     } else if (option.charset === 'hex') {
-      const charactersLength = hex.length;
-      for (let i = 0; i < option.length; i += 1) {
-        result += hex.charAt(Math.floor(Math.random() * charactersLength));
-      }
+      result= compute(hex, option.length, hex.length);
       result = checkOptions(result, option);
     } else if (option.charset === 'alphabet') {
-      const charactersLength = alphabet.length;
-      for (let i = 0; i < option.length; i += 1) {
-        result += alphabet.charAt(Math.floor(Math.random() * charactersLength));
-      }
+      result= compute(alphabet, option.length, alphabet.length);
       result = checkOptions(result, option);
     } else {
-      const charactersLength = alphanumeric.length;
-      for (let i = 0; i < option.length; i += 1) {
-        result += alphanumeric.charAt(Math.floor(Math.random() * charactersLength));
-      }
+      result= compute(alphanumeric,option.length, alphanumeric.length);
       result = checkOptions(result, option);
     }
   }
-
   return result;
 };
+const compute = (type: string ,optlen: number, length: number) => {
+  let res= "";
+  for (let i = 0; i < optlen; i += 1) {
+    res += type.charAt(Math.floor(Math.random() * length));
+  }
+  return res;
+}
 
 export const generateUnicodeEmoji = (length: number) => {
   let len = length ? length : 16;
