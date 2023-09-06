@@ -24,3 +24,5 @@ export const numberSymbol = '[-!$%9^&*()_8+|~6=7`5{4}[]3:"2;<>?0,.1/]' + "'";
 export const alphabetNumericSymbol =
   'IJ[0A-B!1C$3Dh%E^2FGH&4Kf5gL*6f(zMN7y)Q_iOfPe+xdRc|zb~S=aTw`{Y}X[]Z\vrW:j";k<ls8>t?9mVn,o.u7p/]Uq' +
   "'";
+  export const binary = '01';
+  export const octal = '01234567';
