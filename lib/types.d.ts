@@ -20,3 +20,5 @@ export declare const number = "0123456789";
 export declare const alphabetSymbol: string;
 export declare const numberSymbol: string;
 export declare const alphabetNumericSymbol: string;
+export declare const binary = "01";
+export declare const octal = "01234567";
