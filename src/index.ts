@@ -25,33 +25,41 @@ export const generate = (option: number | options): string => {
     const charactersLength = characters.length;
     result = compute(characters, charactersLength, opt);
   } else if (typeof option === 'object') {
-    const { length = 16, range: characters } = option;
+    
+    const { length = 16, range: characters, charset } = option;
+    
     if (characters) {
       const charactersLength = characters.toString().length;
       result = compute(characters, charactersLength, length);
       result = checkOptions(result, option);
-    } else if (option.charset === 'number') {
-      const max = Math.pow(10, length) - 1; 
-      const randomBytes = crypto.randomBytes(Math.ceil(length / 2));
-      const randomValue = parseInt(randomBytes.toString('hex'), 16) % max; // Converting the random bytes to a number within the desired range
-      result = randomValue.toString();
-      result = checkOptions(result, option);
-    } else if (option.charset === 'binary') {
-      result = compute(binary, 2, length);
-    } else if (option.charset === 'octal') {
-      result = compute(octal, 8, length);
-    } else if (option.charset === 'hex') {
-      const charactersLength = hex.length;
-      result = compute(hex, charactersLength, length);
-      result = checkOptions(result, option);
-    } else if (option.charset === 'alphabet') {
-      const charactersLength = alphabet.length;
-      result = compute(alphabet, charactersLength, length);
-      result = checkOptions(result, option);
-    } else {
-      const charactersLength = alphanumeric.length;
-      result = compute(alphanumeric, charactersLength, length);
-      result = checkOptions(result, option);
+    }
+
+    switch(charset) {
+      case 'number':
+        const max = Math.pow(10, length) - 1; 
+        const randomBytes = crypto.randomBytes(Math.ceil(length / 2));
+        const randomValue = parseInt(randomBytes.toString('hex'), 16) % max; // Converting the random bytes to a number within the desired range
+        result = randomValue.toString();
+        result = checkOptions(result, option);
+        break;
+      case 'binary':
+        result = compute(binary, 2, length);
+        break;
+      case 'octal':
+        result = compute(octal, 8, length);
+        break;
+      case 'hex':
+        result = compute(hex, hex.length, length);
+        result = checkOptions(result, option);
+        break;
+      case 'alphabet':
+        result = compute(alphabet, alphabet.length, length);
+        result = checkOptions(result, option);
+        break;
+      default:
+        const charactersLength = alphanumeric.length;
+        result = compute(alphanumeric, alphanumeric.length, length);
+        result = checkOptions(result, option);
     }
   }
 
