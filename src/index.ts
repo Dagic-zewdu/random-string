@@ -7,7 +7,7 @@ import crypto from 'crypto';
  * @param option - could be a number which is the length of the string to be generated || could be an option {
  * @returns - random string generated
  */
-export const generate = (option: number | options) => {
+export const generate = (option: number | options): string => {
   const compute = (type: string ,optlen: number, length: number) => {
     let result = '';
     const charactersLength = type.length;
@@ -25,35 +25,33 @@ export const generate = (option: number | options) => {
     const charactersLength = characters.length;
     result = compute(characters, charactersLength, opt);
   } else if (typeof option === 'object') {
-    if (!option.length) {
-      option.length = 16;
-    }
+    const { length = 16 } = option;
     if (option.range) {
       const characters = option.range;
       const charactersLength = characters.toString().length;
-      result = compute(characters, charactersLength, option.length);
+      result = compute(characters, charactersLength, length);
       result = checkOptions(result, option);
     } else if (option.charset === 'number') {
-      const max = Math.pow(10, option.length) - 1; 
-      const randomBytes = crypto.randomBytes(Math.ceil(option.length / 2));
+      const max = Math.pow(10, length) - 1; 
+      const randomBytes = crypto.randomBytes(Math.ceil(length / 2));
       const randomValue = parseInt(randomBytes.toString('hex'), 16) % max; // Converting the random bytes to a number within the desired range
       result = randomValue.toString();
       result = checkOptions(result, option);
     } else if (option.charset === 'binary') {
-      result = compute(binary, 2, option.length);
+      result = compute(binary, 2, length);
     } else if (option.charset === 'octal') {
-      result = compute(octal, 8, option.length);
+      result = compute(octal, 8, length);
     } else if (option.charset === 'hex') {
       const charactersLength = hex.length;
-      result = compute(hex, charactersLength, option.length);
+      result = compute(hex, charactersLength, length);
       result = checkOptions(result, option);
     } else if (option.charset === 'alphabet') {
       const charactersLength = alphabet.length;
-      result = compute(alphabet, charactersLength, option.length);
+      result = compute(alphabet, charactersLength, length);
       result = checkOptions(result, option);
     } else {
       const charactersLength = alphanumeric.length;
-      result = compute(alphanumeric, charactersLength, option.length);
+      result = compute(alphanumeric, charactersLength, length);
       result = checkOptions(result, option);
     }
   }
