@@ -10,17 +10,17 @@ import crypto from 'crypto';
 export const generate = (option: number | options): string => {
   
   const compute = (type: string, optlen: number, length: number) => {
-    let result = '';
+    let computedResult = '';
     const charactersLength = type.length;
     for (let i = 0; i < length; i += 1) {
       const randomBytes = crypto.randomBytes(1);
       const randomIndex = Math.floor(randomBytes[0] / 256 * charactersLength);
-      result += type.charAt(randomIndex);
+      computedResult += type.charAt(randomIndex);
     }
-    return result;
+    return computedResult;
   }
 
-  let result: string | number = '';
+  let result = '';
   if (typeof option === 'number' || !option) {
     let opt = option ? option : 16;
     const characters = alphanumeric;
