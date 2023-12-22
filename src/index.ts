@@ -25,9 +25,8 @@ export const generate = (option: number | options): string => {
     const charactersLength = characters.length;
     result = compute(characters, charactersLength, opt);
   } else if (typeof option === 'object') {
-    const { length = 16 } = option;
-    if (option.range) {
-      const characters = option.range;
+    const { length = 16, range: characters } = option;
+    if (characters) {
       const charactersLength = characters.toString().length;
       result = compute(characters, charactersLength, length);
       result = checkOptions(result, option);
