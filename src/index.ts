@@ -8,16 +8,16 @@ import crypto from 'crypto';
  * @returns - random string generated
  */
 export const generate = (option: number | options) => {
-  const compute = (type: string ,optlen: number, length: number) => {
+  const compute = (type: string, optlen: number, length: number) => {
     let result = '';
     const charactersLength = type.length;
     for (let i = 0; i < length; i += 1) {
       const randomBytes = crypto.randomBytes(1);
-      const randomIndex = Math.floor(randomBytes[0] / 256 * charactersLength);
+      const randomIndex = Math.floor((randomBytes[0] / 256) * charactersLength);
       result += type.charAt(randomIndex);
     }
     return result;
-  }
+  };
   let result: string | number = '';
   if (typeof option === 'number' || !option) {
     let opt = option ? option : 16;
@@ -34,7 +34,7 @@ export const generate = (option: number | options) => {
       result = compute(characters, charactersLength, option.length);
       result = checkOptions(result, option);
     } else if (option.charset === 'number') {
-      const max = Math.pow(10, option.length) - 1; 
+      const max = Math.pow(10, option.length) - 1;
       const randomBytes = crypto.randomBytes(Math.ceil(option.length / 2));
       const randomValue = parseInt(randomBytes.toString('hex'), 16) % max; // Converting the random bytes to a number within the desired range
       result = randomValue.toString();
@@ -67,7 +67,7 @@ export const generateUnicodeEmoji = (length: number) => {
   const charactersLength = emojis.length;
   for (let i = 0; i < len; i += 1) {
     const randomBytes = crypto.randomBytes(1);
-    const randomIndex = Math.floor(randomBytes[0] / 256 * charactersLength);
+    const randomIndex = Math.floor((randomBytes[0] / 256) * charactersLength);
     result += emojis[randomIndex].trim();
   }
   return result;
