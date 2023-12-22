@@ -59,7 +59,6 @@ export const generate = (option: number | options): string => {
         result = checkOptions(result, option);
         break;
       default:
-        const charactersLength = alphanumeric.length;
         result = compute(alphanumeric, alphanumeric.length, length);
         result = checkOptions(result, option);
     }
@@ -68,11 +67,10 @@ export const generate = (option: number | options): string => {
   return result;
 };
 
-export const generateUnicodeEmoji = (length: number) => {
-  let len = length ? length : 16;
+export const generateUnicodeEmoji = (length: number = 16) => {
   let result = '';
   const charactersLength = emojis.length;
-  for (let i = 0; i < len; i += 1) {
+  for (let i = 0; i < length; i += 1) {
     const randomBytes = crypto.randomBytes(1);
     const randomIndex = Math.floor(randomBytes[0] / 256 * charactersLength);
     result += emojis[randomIndex].trim();
