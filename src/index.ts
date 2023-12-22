@@ -8,7 +8,8 @@ import crypto from 'crypto';
  * @returns - random string generated
  */
 export const generate = (option: number | options): string => {
-  const compute = (type: string ,optlen: number, length: number) => {
+  
+  const compute = (type: string, optlen: number, length: number) => {
     let result = '';
     const charactersLength = type.length;
     for (let i = 0; i < length; i += 1) {
@@ -18,6 +19,7 @@ export const generate = (option: number | options): string => {
     }
     return result;
   }
+
   let result: string | number = '';
   if (typeof option === 'number' || !option) {
     let opt = option ? option : 16;
