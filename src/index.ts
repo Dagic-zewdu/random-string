@@ -19,6 +19,7 @@ export const generate = (option: number | options): string => {
 
     if (characters) {
       result = compute(characters, length);
+
       result = checkOptions(result, option);
     }
 
