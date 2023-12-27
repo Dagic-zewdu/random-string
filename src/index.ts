@@ -7,65 +7,68 @@ import crypto from 'crypto';
  * @param option - could be a number which is the length of the string to be generated || could be an option {
  * @returns - random string generated
  */
-export const generate = (option: number | options) => {
-  const compute = (type: string, optlen: number, length: number) => {
-    let result = '';
-    const charactersLength = type.length;
-    for (let i = 0; i < length; i += 1) {
-      const randomBytes = crypto.randomBytes(1);
-      const randomIndex = Math.floor((randomBytes[0] / 256) * charactersLength);
-      result += type.charAt(randomIndex);
-    }
-    return result;
-  };
-  let result: string | number = '';
+export const generate = (option: number | options): string => {
+  let result = '';
+
   if (typeof option === 'number' || !option) {
     let opt = option ? option : 16;
     const characters = alphanumeric;
-    const charactersLength = characters.length;
-    result = compute(characters, charactersLength, opt);
+    result = compute(characters, opt);
   } else if (typeof option === 'object') {
-    if (!option.length) {
-      option.length = 16;
+    const { length = 16, range: characters, charset } = option;
+
+    if (characters) {
+      result = compute(characters, length);
+
+      result = checkOptions(result, option);
     }
-    if (option.range) {
-      const characters = option.range;
-      const charactersLength = characters.toString().length;
-      result = compute(characters, charactersLength, option.length);
-      result = checkOptions(result, option);
-    } else if (option.charset === 'number') {
-      const max = Math.pow(10, option.length) - 1;
-      const randomBytes = crypto.randomBytes(Math.ceil(option.length / 2));
-      const randomValue = parseInt(randomBytes.toString('hex'), 16) % max; // Converting the random bytes to a number within the desired range
-      result = randomValue.toString();
-      result = checkOptions(result, option);
-    } else if (option.charset === 'binary') {
-      result = compute(binary, 2, option.length);
-    } else if (option.charset === 'octal') {
-      result = compute(octal, 8, option.length);
-    } else if (option.charset === 'hex') {
-      const charactersLength = hex.length;
-      result = compute(hex, charactersLength, option.length);
-      result = checkOptions(result, option);
-    } else if (option.charset === 'alphabet') {
-      const charactersLength = alphabet.length;
-      result = compute(alphabet, charactersLength, option.length);
-      result = checkOptions(result, option);
-    } else {
-      const charactersLength = alphanumeric.length;
-      result = compute(alphanumeric, charactersLength, option.length);
-      result = checkOptions(result, option);
+
+    switch (charset) {
+      case 'number':
+        const max = Math.pow(10, length) - 1;
+        const randomBytes = crypto.randomBytes(Math.ceil(length / 2));
+        const randomValue = parseInt(randomBytes.toString('hex'), 16) % max; // Converting the random bytes to a number within the desired range
+        result = randomValue.toString();
+        result = checkOptions(result, option);
+        break;
+      case 'binary':
+        result = compute(binary, length);
+        break;
+      case 'octal':
+        result = compute(octal, length);
+        break;
+      case 'hex':
+        result = compute(hex, length);
+        result = checkOptions(result, option);
+        break;
+      case 'alphabet':
+        result = compute(alphabet, length);
+        result = checkOptions(result, option);
+        break;
+      default:
+        result = compute(alphanumeric, length);
+        result = checkOptions(result, option);
     }
   }
 
   return result;
 };
 
-export const generateUnicodeEmoji = (length: number) => {
-  let len = length ? length : 16;
+const compute = (type: string, length: number) => {
+  let computedResult = '';
+  const charactersLength = type.length;
+  for (let i = 0; i < length; i += 1) {
+    const randomBytes = crypto.randomBytes(1);
+    const randomIndex = Math.floor((randomBytes[0] / 256) * charactersLength);
+    computedResult += type.charAt(randomIndex);
+  }
+  return computedResult;
+};
+
+export const generateUnicodeEmoji = (length: number = 16) => {
   let result = '';
   const charactersLength = emojis.length;
-  for (let i = 0; i < len; i += 1) {
+  for (let i = 0; i < length; i += 1) {
     const randomBytes = crypto.randomBytes(1);
     const randomIndex = Math.floor((randomBytes[0] / 256) * charactersLength);
     result += emojis[randomIndex].trim();

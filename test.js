@@ -14,12 +14,11 @@ describe('testing using provide length', () => {
 describe('testing with given options', () => {
   test('should generate with the given charset', () => {
     let random = randomString.generate({ range: '2846', length: 6 });
-
-    expect(random.match(random, '^d*[02468]$')).toBeTruthy();
+    expect(random.match(/[^2846]/)).toBeFalsy();
   });
   test('should generate with the given charset', () => {
     let random = randomString.generate({ range: 'abcdef', length: 10 });
-    expect(random.match(random, /ˆ[a-f]/)).toBeTruthy();
+    expect(random.match(/[a-f]/)).toBeTruthy();
   });
   test('should be a number only', () => {
     let random = randomString.generate({ charset: 'number', length: 6 });
