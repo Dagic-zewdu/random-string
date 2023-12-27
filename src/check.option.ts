@@ -23,7 +23,9 @@ export const checkOptions = (result: string, option: options) => {
       : alphabetNumericSymbol;
     const charactersLength = characters.length;
     for (let i = 0; i < option.length; i++) {
-      newResult += characters.charAt(Math.floor(Math.random() * charactersLength));
+      newResult += characters.charAt(
+        Math.floor(Math.random() * charactersLength)
+      );
     }
   }
   if (option.symbolsOnly) {
